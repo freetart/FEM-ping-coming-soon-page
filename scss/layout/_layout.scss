@@ -45,35 +45,62 @@
 
   &__form {
     @include mix.flexCenter;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 
     @include mix.responsive(md) {
       flex-direction: column;
     }
 
-    input {
-      @include mix.textStyles;
-      outline: 0;
-      border: 0.1rem solid var.color(paleBlue);
-      border-radius: var.$radius;
-      padding: var.$inputBtnPadding;
+    &__input {
+      display: flex;
+      flex-direction: column;
       width: 50%;
-      margin: 0 1rem;
-      transition: var.$mainTransition;
+      position: relative;
 
       @include mix.responsive(md) {
         width: 80%;
       }
 
-      &:hover,
-      &:focus {
-        border: 0.1rem solid var.color(blue);
+      input {
+        @include mix.textStyles;
+        outline: 0;
+        border: 0.1rem solid var.color(paleBlue);
+        border-radius: var.$radius;
+        padding: var.$inputBtnPadding;
+        margin: 0 1rem;
+        transition: var.$mainTransition;
+
+        &.error {
+          border: 0.1rem solid var.color(lightRed);
+        }
+        &.success {
+          border: 0.1rem solid var.color(lightGreen);
+        }
+
+        &:hover,
+        &:focus {
+          border: 0.1rem solid var.color(blue);
+        }
+      }
+
+      small {
+        @include mix.textStyles;
+        position: absolute;
+        bottom: -2.5rem;
+        left: 4rem;
+        font-size: var.size(xxs);
+        font-style: italic;
+
+        @include mix.responsive(md) {
+          top: -2rem;
+          left: 4rem;
+        }
       }
     }
   }
 
   &__img {
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
 
     img {
       width: 65%;

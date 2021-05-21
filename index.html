@@ -23,12 +23,20 @@
           <p>Subscribe and get notified</p>
         </div>
         <form class="coming-soon__form">
-          <input
-            type="email"
-            placeholder="Your email address..."
-            id="email-input"
-          />
-          <button type="submit" for="email-input" class="btn btn--primary">
+          <div class="coming-soon__form__input">
+            <input
+              type="text"
+              placeholder="Your email address..."
+              id="email-input"
+            />
+            <small class="email-message"></small>
+          </div>
+          <button
+            type="submit"
+            for="email-input"
+            class="btn btn--primary"
+            id="email-btn"
+          >
             Notify Me
           </button>
         </form>
