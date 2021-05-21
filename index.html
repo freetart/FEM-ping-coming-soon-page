@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -10,6 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Frontend Mentor Ping Single Column Coming Soon Page</title>
@@ -27,7 +30,7 @@
     </div>
     <!-- coming soon section -->
     <section class="coming-soon">
-      <div class="coming-soon__content">
+      <div class="coming-soon__content" data-aos="fade-down">
         <div class="coming-soon__title">
           <img src="./images/ping-logo.svg" alt="ping logo" />
           <h1>We are launching <span>soon!</span></h1>
@@ -91,6 +94,12 @@
       </h3>
       <img src="./images/logo/habibdevgif.gif" alt="logo" />
     </footer>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 200, duration: 1000, once: true });
+    </script>
+    <!-- js -->
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
