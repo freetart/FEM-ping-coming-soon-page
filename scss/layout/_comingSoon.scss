@@ -5,8 +5,6 @@
 
 // coming-soon
 .coming-soon {
-  height: 100vh;
-
   &__content {
     @include mix.maxWidthSm;
     @include mix.sectionSpacing;
