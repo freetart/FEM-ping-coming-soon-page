@@ -1,9 +1,9 @@
 "use strict";
 
 const validateEmail = () => {
-  const form = document.querySelector("form");
+  const emailForm = document.querySelector("form");
   const emailInput = document.querySelector("#email-input");
-  const small = document.querySelector(".email-message");
+  const emailMsg = document.querySelector(".email-message");
 
   // check input
   const checkInput = () => {
@@ -20,15 +20,15 @@ const validateEmail = () => {
 
   // error message
   const setErrorMsg = (input, message) => {
-    small.innerText = message;
-    small.style.color = "hsl(354, 100%, 66%)";
+    emailMsg.innerText = message;
+    emailMsg.style.color = "hsl(354, 100%, 66%)";
     emailInput.className = "email-message error";
   };
 
   // success message
   const setSuccessMsg = (input, message) => {
-    small.innerText = message;
-    small.style.color = "hsl(145, 63%, 49%)";
+    emailMsg.innerText = message;
+    emailMsg.style.color = "hsl(145, 63%, 49%)";
     emailInput.className = "email-message success";
   };
 
@@ -40,7 +40,7 @@ const validateEmail = () => {
   };
 
   // submit form
-  form.addEventListener("submit", (e) => {
+  emailForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     checkInput();
